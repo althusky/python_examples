@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/migrations
+END
+0001_initial.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wwwastu/!svn/ver/231/trunk/wwwastu/yandex/migrations/0001_initial.py
+END
+0003_auto.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wwwastu/!svn/ver/264/trunk/wwwastu/yandex/migrations/0003_auto.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wwwastu/!svn/ver/231/trunk/wwwastu/yandex/migrations/__init__.py
+END
+0002_auto__add_field_filefilter_teacher.py
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/migrations/0002_auto__add_field_filefilter_teacher.py
+END

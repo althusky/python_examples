@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{% load cms_tags %}
+{% block 'content' %}
+<h1><a href="{{URL_ROOT}}/service">Услуги</a></h1>
+{% placeholder 'content' %}
+<div class="kat-foot">
+    <a class="button" href="{{URL_ROOT}}/service">Услуги</a>
+    <span class="button"></span>
+</div>
+{% endblock %}

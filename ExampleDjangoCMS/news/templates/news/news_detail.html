@@ -1,0 +1,7 @@
+{% load placeholder_tags %}
+<h1>{{ object.title }}</h1>
+
+<p><span class="date">{{ object.pub_date }}</span><br/>
+        {% render_placeholder object.content %}
+</p>
+

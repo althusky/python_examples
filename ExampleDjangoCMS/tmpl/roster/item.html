@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load placeholder_tags %}
+
+
+{% block 'meta' %}
+	<title>ООО "Сибирский посад"-{{ roster.title|striptags }}</title>
+	<meta name="title" content="{{ roster.title|striptags }}" />
+	<meta name="keywords" content="{{ roster.meta_keywords }}" />
+	<meta name="description" content="{{ roster.meta_description }}"/>
+{% endblock 'meta' %}
+
+{% block 'content'%}
+
+<h1>{{ roster.title|safe }}</h1>
+
+<div class="text">
+
+    {% render_placeholder roster.content %}
+</div>
+
+<div class="kat-foot">
+    <a class="button" href="{% url roster.views.show_list  %}">Наши работы</a>
+    <span class="button"></span>
+</div>
+{% endblock 'content' %}

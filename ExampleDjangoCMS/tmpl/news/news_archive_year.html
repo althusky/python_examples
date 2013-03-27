@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n thumbnail %}
+
+{% block title %}Новости за {{ year }} год : Алтайская конфедерация боевых искусств{% endblock title %}
+{% block 'meta' %}
+	<title>ООО "Сибирский посад" - Новости за {{ year }} год</title>
+	<meta name="title" content="ООО 'Сибирский посад' - Новости за {{ year }} год" />
+	<meta name="keywords" content='Сибирский, посад, Новости' />
+        <meta name="description" content='ООО "Сибирский посад" - Новости'/>
+{% endblock 'meta' %}
+
+{% block 'content' %}
+<h1>Новости за {{ year }} год</h1>
+    <div class="kat-foot" style="float:left;">
+    {% for date in date_list %}
+        
+        <a class="button" href="{% url news_archive_month year=year month=date|date:'m'  %}">{{ date|date:"F" }}</a>
+        <span class="button"></span>
+        
+    {% empty %}
+        {% trans "No news for this year" %}
+    {% endfor %}
+
+    </div>
+<div class="kat-foot">
+<a class="button" href="{% url news_archive_index %}">Архив новостей</a>
+<span class="button"></span>
+</div>   
+{% endblock 'content' %}

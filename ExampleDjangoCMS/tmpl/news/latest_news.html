@@ -1,0 +1,13 @@
+{% load i18n %}
+<h1>Новости</h1>
+
+{% for news in latest %}
+    {% include 'news/news_excerpt.html' %}
+{% empty %}
+    {% trans "No news yet" %}
+{% endfor %}
+
+<div class="kat-foot">
+<a class="button" href="{% url news_archive_index %}">Архив новостей</a>
+<span class="button"></span>
+</div>

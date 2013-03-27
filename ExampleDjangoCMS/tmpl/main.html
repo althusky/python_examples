@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load cms_tags %}
+{% block 'header'%}
+<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/main.css" />
+{% endblock %}
+{% block 'content' %}
+<h1>Кто мы?</h1>
+<div class="line-text">
+    {% placeholder 'about'%}
+<br>
+<br>
+<a href="{{URL_ROOT}}/about">Узнать больше о компании</a>
+</div>
+
+<div class="line">
+<div class="line-l"></div>
+<div class="line-r"></div>
+</div>
+<table class="proflist">
+<tr><td><div class="proflist">{% placeholder 'cube1'%}</div></td>
+<td><div class="proflist">{% placeholder 'cube2' %}</div></td>
+</tr><tr>
+<td><div class="proflist">{% placeholder 'cube3'%}</div></td>
+<td><div class="proflist">{% placeholder 'cube4'%}</div></td>
+</tr>
+
+</table>
+
+<table id="d-table" cellspacing="0" width="100%">
+<tr id="d-top"><td id="d-lt"></td><td id="d-t"></td><td id="d-rt"></tr>
+<tr id="d-center"><td id="d-l"></td><td id="d-content">
+<table border="0" width="100%">
+    <tr><td valign="middle" align="left">{% placeholder 'foot' %}</td>
+    <td align="right">{% placeholder 'foot-img' %}</td></tr>
+</table>
+</td><td id="d-r"></td></tr>
+<tr id="d-bottom"><td id="d-lb"></td><td id="d-b"></td><td id="d-rb"></tr>
+</table>
+
+{% endblock %}
+
+
+

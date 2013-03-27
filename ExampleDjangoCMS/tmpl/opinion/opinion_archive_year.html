@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block 'meta' %}
+	<title>ООО "Сибирский посад" - Новости</title>
+	<meta name="title" content="ООО 'Сибирский посад' - Отзывы" />
+	<meta name="keywords" content='ООО "Сибирский посад" - Отзывы' />
+        <meta name="description" content='Сибирский, посад, отзывы'/>
+{% endblock 'meta' %}
+{% block 'content' %}
+<h1>Отзывы заказчиков за {{ year }} год</h1>
+{% for news in object_list %}
+    {% include 'opinion/opinion_excerpt.html' %}
+{% empty %}
+    Нет отзывов
+{% endfor %}
+<div class="kat-foot">
+<a class="button" href="{% url opinion_archive_index %}">Архив за все годы</a>
+<span class="button"></span>
+</div>
+{% endblock 'content' %}
+{% block 'right' %}
+{% include 'right_news.html'%}
+{% endblock %}

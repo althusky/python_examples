@@ -1,0 +1,22 @@
+{% load thumbnail %}
+
+<div class="gallery">
+{% for image in gallery.picture_set.all %}
+    <a href="{{ image.image.url }}" rel="gallery-{{ gallery.pk }}" title="{{ image }}"><img src="{% thumbnail image.image 150x150 max %}" alt="{{ image }}" /></a></li>
+{% endfor %}
+</div>
+
+
+<script type="text/javascript">
+$(function() {
+    $('a[rel=gallery-{{ gallery.pk }}]').lightBox({
+        txtImage: 'Изображение',
+        txtOf: 'из',
+        imageLoading: '{{MEDIA_URL}}img/lightbox/loading.gif',
+        imageBtnClose: '{{MEDIA_URL}}img/lightbox/close_grey.png',
+        imageBtnPrev: '{{MEDIA_URL}}img/lightbox/prev_grey.gif',
+        imageBtnNext: '{{MEDIA_URL}}img/lightbox/next_grey.gif',
+        imageBlank: '{{MEDIA_URL}}img/lightbox/blank.gif'
+    });
+});
+</script>

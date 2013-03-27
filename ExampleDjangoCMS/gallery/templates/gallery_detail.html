@@ -1,0 +1,3 @@
+{% for image in object.picture_set.all %}
+    <img src="{{ image.image.url }}" alt="{{ image }}" />
+{% endfor %}

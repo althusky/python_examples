@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% load cms_tags %}
+{% block 'content' %}
+<h1>Контакты</h1>
+<h2>ООО Сибирский посад</h2>
+<table width="100%" border="0" cellspacing="0">
+<tr height="10px"><td background="{{MEDIA_URL}}img/lup.png" width="24px"></td><td></td></tr>
+<tr><td background="{{MEDIA_URL}}img/lcent.png"></td><td>
+{% placeholder 'content' %}
+</td></tr>
+<tr height="10px"><td background="{{MEDIA_URL}}img/ldown.png" width="24px"></td><td></td></tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+<tr height="10px"><td background="{{MEDIA_URL}}img/lup.png" width="24px"></td><td></td></tr>
+<tr><td background="{{MEDIA_URL}}img/lcent.png"></td><td>
+{% placeholder 'rekvizit' %}
+</td></tr>
+<tr height="10px"><td background="{{MEDIA_URL}}img/ldown.png" width="24px"></td><td></td></tr>
+</table>
+<br><br>
+{% placeholder 'map' %}
+{% endblock %}

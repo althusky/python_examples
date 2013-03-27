@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block 'meta' %}
+	<title>ООО "Сибирский посад" - Новости</title>
+	<meta name="title" content="ООО 'Сибирский посад' - Новости" />
+	<meta name="keywords" content='ООО "Сибирский посад" - Новости' />
+        <meta name="description" content='Сибирский, посад, Новости'/>
+{% endblock 'meta' %}
+
+{% block 'content' %}
+<h1>{% trans "Latest news" %}</h1>
+
+
+{% for news in latest %}
+    {% include 'news/news_excerpt.html' %}
+{% empty %}
+    {% trans "No news yet" %}
+{% endfor %}
+
+<div align="right"><h3>Архив по годам</h3></div>
+<div class="kat-foot">
+{% for date_year in date_list %}
+
+<a class="button" href="{% url news_archive_year date_year|date:"Y" %}">{{ date_year|date:"Y" }}</a>
+<span class="button"></span>
+
+{% endfor %}
+</div>
+<div class="kat-foot">
+<a class="button" href="/last-news">Новости</a>
+<span class="button"></span>
+</div>
+{% endblock 'content' %}
+{% block 'right' %}
+{% include 'right_opinion.html'%}
+{% endblock %}

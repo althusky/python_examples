@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.name }} : ООО "Сибирский посад"{% endblock title %}
+
+{% block 'header' %}
+    <link type="text/css" href="{{MEDIA_URL}}css/jquery.lightbox-0.5.css" media="screen" rel="stylesheet" />
+    <script type="text/javascript" src="{{MEDIA_URL}}cms/js/lib/jquery.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/jquery.lightbox-0.5.min.js"></script>
+{% endblock 'header' %}
+
+{% block 'content' %}
+<h1>{{ object.name }}</h1>
+<div class="text">
+    {% with object as gallery %}
+        {% include 'gallery/gallery.html' %}
+    {% endwith %}
+</div>
+{% endblock 'content' %}

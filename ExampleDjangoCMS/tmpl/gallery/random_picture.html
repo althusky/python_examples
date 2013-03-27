@@ -1,0 +1,9 @@
+{% load thumbnail %}
+<div id="photo">
+    <h3>Фотография на&nbsp;память</h3>
+    {% if picture %}
+    <a href="{% url gallery_detail picture.gallery.pk %}"><img src="{% thumbnail picture.image 160x160 max %}" alt="{{ picture }}" title="{{ picture }}" /></a>
+    {% else %}
+    <img src="/aikidodze/media/img/photo.jpg" alt="Фотография на память" title="Фотография на память" />
+    {% endif %}
+</div>

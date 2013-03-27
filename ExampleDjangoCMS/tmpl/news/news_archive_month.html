@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block 'meta' %}
+	<title>ООО "Сибирский посад" - Новости за {{ month|date:"F Y" }}</title>
+	<meta name="title" content="ООО 'Сибирский посад' - Новости за {{ month|date:"F Y" }}" />
+	<meta name="keywords" content='Сибирский, посад, Новости' />
+        <meta name="description" content='ООО "Сибирский посад" - Новости'/>
+{% endblock 'meta' %}
+
+
+
+{% block 'content' %}
+<h1>Новости за {{ month|date:"F Y" }}</h1>
+
+{% for news in object_list %}
+    {% include 'news/news_excerpt.html' %}
+{% empty %}
+    {% trans "No news for this month" %}
+{% endfor %}
+<div class="kat-foot">
+<a class="button" href="{% url news_archive_index %}">Архив новостей</a>
+<span class="button"></span>
+</div>
+{% endblock 'content' %}

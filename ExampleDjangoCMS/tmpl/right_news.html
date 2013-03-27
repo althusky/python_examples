@@ -1,0 +1,8 @@
+{% load cms_tags %}
+<h1>Новости</h1>
+{% for item in right_news %}
+<div class="news">{{item.pub_date|date:"d.m.Y"}}</div>
+<a class="news" href="{{item.get_absolute_url}}">{{item.title}}</a><br>
+{{item.excerpt|safe}}
+{% endfor%}
+<a href="{% page_url "last-news" %}">Все новости</a>

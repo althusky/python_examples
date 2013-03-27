@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load placeholder_tags %}
+
+
+{% block 'meta' %}
+	<title>ООО "Сибирский посад"-{{ object.title }}</title>
+	<meta name="title" content="{{ object.title }}" />
+	<meta name="keywords" content="{{ object.meta_keywords }}" />
+	<meta name="description" content="{{ object.meta_description }}"/>
+{% endblock 'meta' %}
+
+{% block 'content'%}
+
+<h1>{{ object.title }}</h1>
+
+<div class="text">
+<div class="date">{{ object.pub_date|date:"d.m.Y" }}</div>
+    {% render_placeholder object.content %}
+</div>
+
+<div class="kat-foot">
+<a class="button" href="{% url opinion_archive_index %}">Все отзывы</a>
+<span class="button"></span>
+</div>
+{% endblock 'content' %}

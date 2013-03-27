@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load placeholder_tags %}
+
+
+{% block 'meta' %}
+	<title>ООО "Сибирский посад"- Наши работы </title>
+	<meta name="title" content='ООО "Сибирский посад"- Наши работы ' />
+	<meta name="keywords" content="Сибирский, посад, работы " />
+	<meta name="description" content='ООО "Сибирский посад"- Наши работы '/>
+{% endblock 'meta' %}
+
+{% block 'content'%}
+<h1>Наши работы</h1>
+<div class="kat-inline">
+{% for item in roster.object_list %}
+  
+    
+    <div class="kat-item {% cycle 'kat-item-left' '' ''%} ">
+    <div class="kat-head"><a href="{% url roster.views.show_item item.id %}">{{item.title|safe}}</a></div>
+    <a href="{% url roster.views.show_item item.id %}">
+    <img src="{{item.image.url}}"/>
+    </a>
+    <div class="kat-txt">{{item.excerpt|safe}}
+    <br/>
+    <a href="{% url roster.views.show_item item.id %}">Читать дальше</a>
+    </div>
+    </div>
+    {% cycle ' ' ' ' '</div><div class="kat-inline"><div class="kat-line" style="margin-left: 0px;"></div><div class="kat-line"></div><div class="kat-line"></div></div><div class="kat-inline"> '%}
+
+    {% if forloop.last %}
+        {%if forloop.counter == 3 or forloop.counter == 6 or forloop.counter == 9 %}
+            </div>
+        {% else %}
+            </div><div class="kat-inline"><div class="kat-line kat-item-left"></div><div class="kat-line"></div><div class="kat-line"></div></div>
+        {% endif %}
+    {% endif%}
+    {% endfor %}
+
+<div class="kat-foot">
+    Страницы:
+    {% for num in roster.paginator.page_range %}
+        {% if num == roster.number %}
+            {{ num }}
+        {% else %}
+            <a href="{% url roster.views.show_list num  %}">{{ num }}</a>
+        {% endif %}
+    {% endfor %}
+    <br>
+
+    {% if roster.has_previous %}
+    <a class="button" href="{% url roster.views.show_list roster.previous_page_number %}">Предыдущая страницы</a>
+    <span class="button"></span>
+    {% endif %}
+    {% if roster.has_next %}
+    <a class="button" href="{% url roster.views.show_list roster.next_page_number %}">Следующая страницы</a>
+    <span class="button"></span>
+    {% endif %}
+</div>
+{% endblock 'content'%}

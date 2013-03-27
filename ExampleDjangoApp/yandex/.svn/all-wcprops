@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex
+END
+ws.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/ws.py
+END
+ftp_service.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/ftp_service.py
+END
+test_gcc.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/test_gcc.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/wwwastu/!svn/ver/229/trunk/wwwastu/yandex/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/wwwastu/!svn/ver/264/trunk/wwwastu/yandex/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/urls.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/wwwastu/!svn/ver/261/trunk/wwwastu/yandex/forms.py
+END

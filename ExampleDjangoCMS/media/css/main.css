@@ -1,0 +1,20 @@
+#d-table{
+	padding: 0px;
+	border-spacing: 0;
+	
+}
+#d-dop, #d-bottom, #d-lt, #d-t, #d-rt, #d-b, #d-lb, #d-rb{
+	padding: 0px;
+	height: 8px;
+	overflow: hidden; 
+	}
+#d-lt, #d-rt, #d-l, #d-r, #d-lb, #d-rb{ width: 8px;}
+#d-lt{background-image: url('../img/lt.png');}
+#d-t{background-image: url('../img/t.png');}
+#d-rt{background-image: url('../img/rt.png');}
+#d-l{background-image: url('../img/l.png');}
+#d-r{background-image: url('../img/r.png');}
+#d-b{background-image: url('../img/b.png');}
+#d-lb{background-image: url('../img/lb.png');}
+#d-rb{background-image: url('../img/rb.png');}
+#d-content{ padding: 7px 7px 7px 7px;}

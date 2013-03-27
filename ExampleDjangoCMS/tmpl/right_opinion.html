@@ -1,0 +1,9 @@
+<h1>Отзывы заказчиков</h1>
+
+{% for item in right_opinion %}
+
+<h2><a class="news" href="{{item.get_absolute_url}}">{{item.title}}</a><br /></h2>
+{{item.excerpt|safe}}
+{% endfor%}
+
+<a href="{% url opinion_archive_index %}">Все отзывы</a>
